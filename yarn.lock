@@ -3544,7 +3544,7 @@ core-js-compat@^3.37.1, core-js-compat@^3.38.0:
   dependencies:
     browserslist "^4.23.3"
 
-core-js@^3.25.3, core-js@^3.37.1:
+core-js@^3.14.0, core-js@^3.25.3, core-js@^3.37.1:
   version "3.38.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.38.1.tgz#aa375b79a286a670388a1a363363d53677c0383e"
   integrity sha512-OP35aUorbU3Zvlx7pjsFdu1rGNnD4pgw/CWoYzRY3t2EzoVT7shKHY1dlAy3f41cGIO7ZDPQimhGFTlEYkG/Hw==
@@ -6006,6 +6006,11 @@ launch-editor@^2.8.1:
     picocolors "^1.0.0"
     shell-quote "^1.8.1"
 
+libphonenumber-js@^1.10.12:
+  version "1.11.7"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.11.7.tgz#efe4fcf816e1982925e9c800d0013b0ee99b8283"
+  integrity sha512-x2xON4/Qg2bRIS11KIN9yCNYUjhtiEjNyptjX0mX+pyKHecxuJVLIpfX1lq9ZD6CrC/rB+y4GBi18c6CEcUR+A==
+
 lilconfig@^2.0.3, lilconfig@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.1.0.tgz#78e23ac89ebb7e1bfbf25b18043de756548e7f52"
@@ -7183,9 +7188,9 @@ pkg-dir@^4.1.0:
     find-up "^4.0.0"
 
 pkg-types@^1.0.3, pkg-types@^1.1.1, pkg-types@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/pkg-types/-/pkg-types-1.1.3.tgz#161bb1242b21daf7795036803f28e30222e476e3"
-  integrity sha512-+JrgthZG6m3ckicaOB74TwQ+tBWsFl3qVQg7mN8ulwSOElJ7gBhKzj2VkCPnZ4NlF6kEquYU+RIYNVAvzd54UA==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/pkg-types/-/pkg-types-1.2.0.tgz#d0268e894e93acff11a6279de147e83354ebd42d"
+  integrity sha512-+ifYuSSqOQ8CqP4MbZA5hDpb97n3E8SVWdJe+Wms9kj745lmd3b7EZJiqvmLwAlmRfjrI7Hi5z3kdBJ93lFNPA==
   dependencies:
     confbox "^0.1.7"
     mlly "^1.7.1"
@@ -7978,7 +7983,7 @@ postcss@^7.0.36:
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-postcss@^8.2.1, postcss@^8.2.15, postcss@^8.4.14, postcss@^8.4.23, postcss@^8.4.38, postcss@^8.4.41:
+postcss@^8.2.1, postcss@^8.2.15, postcss@^8.4.14, postcss@^8.4.23, postcss@^8.4.38:
   version "8.4.41"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.41.tgz#d6104d3ba272d882fe18fc07d15dc2da62fa2681"
   integrity sha512-TesUflQ0WKZqAvg52PWL6kHgLKP6xB6heTOdoYM0Wt2UHyxNa4K25EZZMgKns3BH1RLVbZCREPpLY0rhnNoHVQ==
@@ -9778,6 +9783,14 @@ vue-style-loader@^4.1.0, vue-style-loader@^4.1.3:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
+vue-tel-input@^5.12.0:
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/vue-tel-input/-/vue-tel-input-5.15.0.tgz#403921c15bd12af8cc7aae08ad7d50b8e6bd07f5"
+  integrity sha512-oWixiprn+kZ2tZGMP1+miq1LO9W19/K/qX4b5i9fDmh2vhgDdXo1D6FFqEFRFg0mT3cPs6nA6BS1D4Zd+8JaQw==
+  dependencies:
+    core-js "^3.14.0"
+    libphonenumber-js "^1.10.12"
+
 vue-template-compiler@^2.6.14, vue-template-compiler@^2.7.10, vue-template-compiler@^2.7.16:
   version "2.7.16"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.7.16.tgz#c81b2d47753264c77ac03b9966a46637482bb03b"
@@ -9799,7 +9812,7 @@ vue@^2.7.10, vue@^2.7.16:
     "@vue/compiler-sfc" "2.7.16"
     csstype "^3.1.0"
 
-vuex@^3.6.2:
+vuex@^3.0.1, vuex@^3.6.2:
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.6.2.tgz#236bc086a870c3ae79946f107f16de59d5895e71"
   integrity sha512-ETW44IqCgBpVomy520DT5jf8n0zoCac+sxWnn+hMe/CzaSejb/eVw2YToiXYX+Ex/AuHHia28vWTq4goAexFbw==

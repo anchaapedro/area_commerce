@@ -32,9 +32,16 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["@nuxtjs/pwa", "@nuxtjs/axios"],
+  pwa: {
+    manifest: {
+      lang: "en",
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: ["vee-validate/dist/rules", "/@fullcalendar.*/"],
+  },
   env: {
     API_HOST: "https://areia-app-backend.onrender.com",
   },
