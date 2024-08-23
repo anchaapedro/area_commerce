@@ -9812,6 +9812,11 @@ vue@^2.7.10, vue@^2.7.16:
     "@vue/compiler-sfc" "2.7.16"
     csstype "^3.1.0"
 
+vueperslides@^2.16.0:
+  version "2.16.0"
+  resolved "https://registry.yarnpkg.com/vueperslides/-/vueperslides-2.16.0.tgz#db1126abdf45fcdfeb722c7e4c252df3cbcfffbe"
+  integrity sha512-HosQXtbFr7qexeLTb6k7H+2Q7iODELGRalRDmPviMulSLDUBub8lmeVjda8TK3IcKpD0wma0A7bg085HtwDiRg==
+
 vuex@^3.0.1, vuex@^3.6.2:
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.6.2.tgz#236bc086a870c3ae79946f107f16de59d5895e71"
