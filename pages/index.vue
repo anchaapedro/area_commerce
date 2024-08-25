@@ -1,6 +1,6 @@
 <template>
-  <div class="py-10">
-    <Carrossel></Carrossel>
+  <div class="py-10 mt-12">
+    <Carrossel class="mt-5"></Carrossel>
     <section>
       <article>
         <h3
@@ -78,7 +78,7 @@ import { Product } from "@/data/mock/product";
 export default Vue.extend({
   components: {
     Carrossel,
-    ProductCard,
+    ProductCard
   },
   data: () => ({
     categories: [
