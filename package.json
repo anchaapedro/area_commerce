@@ -13,6 +13,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "core-js": "^3.25.3",
+    "lucide-vue": "^0.436.0",
     "nuxt": "^2.15.8",
     "vee-validate": "3",
     "vue": "^2.7.10",
