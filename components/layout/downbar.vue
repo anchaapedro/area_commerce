@@ -118,7 +118,7 @@
       </div>
     </div>
     <hr class="w-full border-footer-default " />
-    <div class="text-white text-center p-2">
+    <div class="text-white text-center p-2 mt-5">
       <p>&copy; {{ year }}. Todos os direitos reservados.</p>
     </div>
   </footer>
