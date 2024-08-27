@@ -6,10 +6,10 @@
       class="w-full flex flex-col md:flex-row justify-between space-y-5 md:space-y-0 md:space-x-64"
     >
       <div
-        class="flex flex-col space-y-4 lg:w-44 xl:w-56 2xl:w-72 text-white"
+        class="flex flex-col space-y-4 lg:w-44 xl:w-56 2xl:w-50 text-white"
       >
         <h4
-          class="text-base lg:text-lg font-semibold border-b-2 border-footer-default text-center"
+          class="text-base lg:text-lg font-semibold border-b-2 border-footer-default"
         >
           Contacte-nos
         </h4>
@@ -40,10 +40,10 @@
       </div>
 
       <div
-        class="flex flex-col space-y-4 lg:w-44 xl:w-56 2xl:w-72 text-white"
+        class="flex flex-col space-y-4 lg:w-44 xl:w-56 2xl:w-50 text-white"
       >
         <h4
-          class="text-base lg:text-lg font-semibold border-b-2 border-footer-default text-center"
+          class="text-base lg:text-lg font-semibold border-b-2 border-footer-default"
         >
           Categorias
         </h4>
@@ -79,10 +79,10 @@
       </div>
 
       <div
-        class="flex flex-col space-y-4 lg:w-44 xl:w-56 2xl:w-72 text-white"
+        class="flex flex-col space-y-4 lg:w-44 xl:w-56 2xl:w-50 text-white"
       >
         <h4
-          class="text-base lg:text-lg font-semibold border-b-2 border-footer-default text-center"
+          class="text-base lg:text-lg font-semibold border-b-2 border-footer-default"
         >
           Serviços
         </h4>
