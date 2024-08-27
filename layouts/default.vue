@@ -4,15 +4,19 @@
     <main class="flex flex-col mx-auto container px-5">
       <nuxt />
     </main>
+    <downbar class="w-full" />
   </div>
 </template>
 
 <script>
 import Topbar from "~/components/layout/Topbar.vue";
+import downbar from "~/components/layout/downbar.vue";
+
 export default {
   name: "Default",
   components: {
     Topbar,
+    downbar
   },
 };
 </script>
