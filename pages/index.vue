@@ -78,7 +78,7 @@ import { Product } from "@/data/mock/product";
 export default Vue.extend({
   components: {
     Carrossel,
-    ProductCard,
+    ProductCard
   },
   data: () => ({
     categories: [
