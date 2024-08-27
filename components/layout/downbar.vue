@@ -1,9 +1,9 @@
 <template>
   <footer
-    class="bg-blue-500 w-full px-4 py-20 space-y-10 md:space-y-0 md:px-20 flex flex-col items-center"
+    class="bg-blue-500 w-full px-4 py-20  md:space-y-0 md:px-20 flex flex-col items-center"
   >
     <div
-      class="w-full flex flex-col md:flex-row justify-between space-y-5 md:space-y-0 md:space-x-64"
+      class="w-full flex flex-col md:flex-row justify-between space-y-5 md:space-y-0 md:space-x-64 mb-14"
     >
       <div
         class="flex flex-col space-y-4 lg:w-44 xl:w-56 2xl:w-50 text-white"
@@ -117,6 +117,10 @@
         </div>
       </div>
     </div>
+    <hr class="w-full border-footer-default " />
+    <div class="text-white text-center p-2 mt-5">
+      <p>&copy; {{ year }}. Todos os direitos reservados.</p>
+    </div>
   </footer>
 </template>
 
@@ -135,5 +139,8 @@ export default Vue.extend({
 <style scoped>
 .text-footer-gray {
   color: #ffffff;
+}
+.border-footer-default {
+  border-color: #ffffff;
 }
 </style>
