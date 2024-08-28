@@ -1,146 +1,89 @@
 <template>
   <footer
-    class="bg-blue-500 w-full px-4 py-20  md:space-y-0 md:px-20 flex flex-col items-center"
+    class="bg-white w-full py-20 md:space-y-0 flex flex-col items-center border-t-2 border-gray-100"
   >
     <div
-      class="w-full flex flex-col md:flex-row justify-between space-y-5 md:space-y-0 md:space-x-64 mb-14"
+      class="w-full flex flex-col md:flex-row justify-between space-y-5 md:space-y-0 mb-14"
     >
       <div
-        class="flex flex-col space-y-4 lg:w-44 xl:w-56 2xl:w-50 text-white"
+        v-for="section in footerSections"
+        :key="section.title"
+        class="flex flex-col space-y-4 lg:w-44 xl:w-56 2xl:w-50 text-gray-800"
       >
         <h4
-          class="text-base lg:text-lg font-semibold border-b-2 border-footer-default"
+          class="text-base lg:text-lg font-semibold border-b-2 border-gray-300"
         >
-          Contacte-nos
+          {{ section.title }}
         </h4>
         <div class="flex flex-col space-y-4">
-          <p class="text-footer-gray">
-            Email: contato@empresa.com
-          </p>
-          <p class="text-footer-gray">
-           Telefone: +123 456 789
-          </p>
-          <div class="flex flex-col space-y-2">
+          <div v-for="item in section.items" :key="item.text">
             <a
-              href="https://www.instagram.com/empresa/"
+              v-if="item.link"
+              :href="item.link"
               target="_blank"
-              class="text-footer-gray flex items-center hover:text-purple-default hover:font-semibold"
+              class="text-gray-600 hover:text-[#008ECC] hover:font-bold"
             >
-              Instagram
+              {{ item.text }}
             </a>
-            <a
-              href="https://www.linkedin.com/company/empresa/"
-              target="_blank"
-              class="text-footer-gray flex items-center hover:text-purple-default hover:font-semibold"
+            <NuxtLink
+              v-else-if="item.route"
+              :to="item.route"
+              class="text-gray-600 hover:text-[#008ECC] hover:font-bold"
             >
-              LinkedIn
-            </a>
+              {{ item.text }}
+            </NuxtLink>
+            <p v-else class="text-gray-600">{{ item.text }}</p>
           </div>
         </div>
       </div>
-
-      <div
-        class="flex flex-col space-y-4 lg:w-44 xl:w-56 2xl:w-50 text-white"
-      >
-        <h4
-          class="text-base lg:text-lg font-semibold border-b-2 border-footer-default"
-        >
-          Categorias
-        </h4>
-        <div class="flex flex-col space-y-4">
-          <NuxtLink
-            to="/aparelhos"
-            class="text-footer-gray flex items-center hover:text-purple-default hover:font-bold"
-          >
-            Aparelhos
-          </NuxtLink>
-
-          <NuxtLink
-            to="/celulares"
-            class="text-footer-gray flex items-center hover:text-purple-default hover:font-bold"
-          >
-            Celulares
-          </NuxtLink>
-
-          <NuxtLink
-            to="/eletronicos"
-            class="text-footer-gray flex items-center hover:text-purple-default hover:font-bold"
-          >
-            Eletrônicos
-          </NuxtLink>
-
-          <NuxtLink
-            to="/maquinaria"
-            class="text-footer-gray flex items-center hover:text-purple-default hover:font-bold"
-          >
-            Maquinaria
-          </NuxtLink>
-        </div>
-      </div>
-
-      <div
-        class="flex flex-col space-y-4 lg:w-44 xl:w-56 2xl:w-50 text-white"
-      >
-        <h4
-          class="text-base lg:text-lg font-semibold border-b-2 border-footer-default"
-        >
-          Serviços
-        </h4>
-        <div class="flex flex-col space-y-4">
-          <NuxtLink
-            to="/sobre-nos"
-            class="text-footer-gray flex items-center hover:text-purple-default hover:font-bold"
-          >
-            Sobre Nós
-          </NuxtLink>
-
-          <NuxtLink
-            to="/faq"
-            class="text-footer-gray flex items-center hover:text-purple-default hover:font-bold"
-          >
-            FAQ
-          </NuxtLink>
-
-          <NuxtLink
-            to="/termos-condicoes"
-            class="text-footer-gray flex items-center hover:text-purple-default hover:font-bold"
-          >
-            Termos e Condições
-          </NuxtLink>
-
-          <NuxtLink
-            to="/politica-privacidade"
-            class="text-footer-gray flex items-center hover:text-purple-default hover:font-bold"
-          >
-            Política de Privacidade
-          </NuxtLink>
-        </div>
-      </div>
     </div>
-    <hr class="w-full border-footer-default " />
-    <div class="text-white text-center p-2 mt-5">
+    <hr class="w-full border-gray-300" />
+    <div class="text-gray-600 text-center p-2 mt-5">
       <p>&copy; {{ year }}. Todos os direitos reservados.</p>
     </div>
   </footer>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
 export default Vue.extend({
-  name: 'downbar',
+  name: "downbar",
   data() {
     return {
-      year: new Date().getFullYear()
-    }
-  }
-})
+      year: new Date().getFullYear(),
+      footerSections: [
+        {
+          title: "Contacte-nos",
+          items: [
+            { text: "Email: contato@empresa.com" },
+            { text: "Telefone: +123 456 789" },
+            { text: "Instagram", link: "https://www.instagram.com/empresa/" },
+            {
+              text: "LinkedIn",
+              link: "https://www.linkedin.com/company/empresa/",
+            },
+          ],
+        },
+        {
+          title: "Categorias",
+          items: [
+            { text: "Aparelhos", route: "/aparelhos" },
+            { text: "Celulares", route: "/celulares" },
+            { text: "Eletrônicos", route: "/eletronicos" },
+            { text: "Maquinaria", route: "/maquinaria" },
+          ],
+        },
+        {
+          title: "Serviços",
+          items: [
+            { text: "Sobre Nós", route: "/sobre-nos" },
+            { text: "FAQ", route: "/faq" },
+            { text: "Termos e Condições", route: "/termos-condicoes" },
+            { text: "Política de Privacidade", route: "/politica-privacidade" },
+          ],
+        },
+      ],
+    };
+  },
+});
 </script>
-
-<style scoped>
-.text-footer-gray {
-  color: #ffffff;
-}
-.border-footer-default {
-  border-color: #ffffff;
-}
-</style>

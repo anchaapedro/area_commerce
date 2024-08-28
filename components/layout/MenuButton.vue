@@ -40,10 +40,10 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
 
 export default Vue.extend({
-  name: 'MenuButton',
+  name: "MenuButton",
   props: {
     isMenuOpen: {
       type: Boolean,
@@ -51,15 +51,15 @@ export default Vue.extend({
     },
     customColor: {
       type: String,
-      default: '',
+      default: "",
     },
   },
   methods: {
     toggleMenu() {
-      this.$emit('toggleMenu')
+      this.$emit("toggleMenu");
     },
   },
-})
+});
 </script>
 
 <style scoped></style>
