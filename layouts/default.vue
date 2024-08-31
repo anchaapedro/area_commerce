@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-wrap lg:flex-row min-h-screen antialised">
     <topbar class="w-full fixed top-0 left-0 z-30" />
-    <main class="flex flex-col mx-auto container max-sm:px-5">
+    <main class="flex flex-col mx-auto container px-3 mt-24">
       <nuxt />
       <downbar class="w-full" />
     </main>

@@ -1,5 +1,5 @@
 <template>
-  <div class="py-10 mt-12">
+  <div class="py-10">
     <Carrossel class="mt-5"></Carrossel>
     <section>
       <article>
@@ -78,7 +78,7 @@ import { Product } from "@/data/mock/product";
 export default Vue.extend({
   components: {
     Carrossel,
-    ProductCard
+    ProductCard,
   },
   data: () => ({
     categories: [
@@ -95,11 +95,6 @@ export default Vue.extend({
     Product,
   }),
   name: "IndexPage",
-  methods: {
-    selectCategory(category: string) {
-      this.selectedCategory = category;
-    },
-  },
   mounted() {
     this.startAutoScroll();
   },

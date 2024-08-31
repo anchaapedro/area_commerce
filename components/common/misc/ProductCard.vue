@@ -1,6 +1,7 @@
 <template>
   <section
-    class="flex flex-col relative border border-gray-300 rounded-md p-4 cursor-pointer"
+    @click="$router.push(`/product/${product.id}`)"
+    class="flex flex-col relative justify-center items-center border border-gray-300 rounded-md p-4 cursor-pointer"
   >
     <span
       v-if="canExclude"
@@ -19,16 +20,20 @@
     </span>
     <img
       class="w-full h-20 md:h-28 object-scale-down transform duration-300 hover:scale-110"
-      :src="product.image"
+      :src="product.img"
       alt="image-alt"
       @click="$emit('edit', product)"
     />
     <div class="flex flex-col w-56">
-      <span id="title" class="text-sm sm:text-md font-semibold"
+      <span id="title" class="text-sm sm:text-md text-center font-semibold"
         >MT {{ currencyFormat(product.price) }}</span
       >
-      <p id="description" class="text-xs sm:text-sm text-gray-400">
-        {{ product.description }}
+      <p id="description" class="text-xs sm:text-sm text-center text-gray-400">
+        {{
+          product.description.length > 40
+            ? product.description.slice(0, 40) + "..."
+            : product.description
+        }}
       </p>
     </div>
   </section>
@@ -50,7 +55,7 @@ export default {
     },
     position: {
       type: Number,
-      required: true,
+      required: false,
     },
     canExclude: {
       type: Boolean,
