@@ -31,7 +31,7 @@ export default {}
   transform: scale(1.1);
 }
 .sk-folding-cube .sk-cube:before {
-  @apply bg-primary-default;
+  @apply bg-blue-500;
   content: '';
   position: absolute;
   top: 0;
