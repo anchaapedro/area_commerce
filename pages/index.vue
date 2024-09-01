@@ -33,7 +33,7 @@
             href="/"
             class="text-blue-500 font-light text-xl underline underline-offset-4"
           >
-            Ver todos
+            Ver todos os produtos
           </a>
         </div>
         <section>
